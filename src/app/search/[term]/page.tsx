@@ -6,6 +6,7 @@ params:{
 }
 
 function Search({params:{term}}:props){
+   
     
     return <h1>
         Search Page {term}
