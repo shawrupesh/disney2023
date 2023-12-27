@@ -24,7 +24,7 @@ export default function Header() {
   //Genre dropdown
  }
 <div className="flex space-x-4">
-  <GenreDropDown />
+  {/* <GenreDropDown /> */}
   <Search />
   <ThemeToggle />
 </div>

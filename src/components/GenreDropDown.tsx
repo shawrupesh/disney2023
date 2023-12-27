@@ -11,13 +11,12 @@ import Link from "next/link";
 
 export default async function GenreDropDown() {
   const {genres}= await getGenreData()
-  console.log(genres);
   
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>Open</DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuLabel>Genre</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {genres.map((genre:any)=>{
           return(
