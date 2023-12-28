@@ -13,15 +13,15 @@ export default async function GenreDropDown() {
   const data= await getGenreData()
   
   return (
-    <DropdownMenu>
+    <DropdownMenu >
       <DropdownMenuTrigger>Open</DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="font-bold  dark:bg-black overflow-y-scroll h-96 ">
         <DropdownMenuLabel>Genre</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {data?.genres?.map((genre:any)=>{
           return(
             <DropdownMenuItem key={genre.id}>
-              <Link href={`/genre/${genre.id}?genre=${genre.name}`}>
+              <Link className="" href={`/genre/${genre.id}?genre=${genre.name}`}>
               {genre.name}
               </Link>
             </DropdownMenuItem>

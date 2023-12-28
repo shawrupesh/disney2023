@@ -13,7 +13,7 @@ async function Search({ params: { term } }: props) {
 
   const label = decodeURI(term);
   return (
-    <div className="z-100 ">
+    <div className="relative top-10">
       {searchedMovie.length > 0 ? (
         <MoviesCarousel
           title={`Result for ${label}`}

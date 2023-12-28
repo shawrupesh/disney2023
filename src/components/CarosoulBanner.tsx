@@ -15,24 +15,22 @@ function CarosoulBanner({ movies }: any) {
 
   return (
     <>
-      <div className="overflow-hidden lg: ml-2  h-96 cursor-pointer" ref={emblaRef}>
-        <div className=" flex ">
+      <div className="overflow-hidden h-96 cursor-pointer" ref={emblaRef}>
+        <div className=" flex relative">
           {movies.map((movie: any) => (
-            <div key={movie.id} className="  min-w-0 flex-[0_0_100%]">
+            <div key={movie.id} className="min-w-0 flex-[0_0_100%]">
               <Image
-                src={getImagePath( movie.backdrop_path ,true)}
+                src={getImagePath(movie.backdrop_path, true)}
                 alt="movie"
                 width={1920}
                 height={800}
                 key={movie.id}
                 className="object-center shadow-md shadow-gray-900 drop-shadow-xl rounded-sm"
               />
-              <div className="hidden md:inline absolute top-2 ml-32 mt-20 z-50     ">
-              <h2 className="text-5xl font-bold z-20 ml-48">{movie.name}</h2>
-              <p className="my-2 ml-48">{movie.overview}</p>
+              <div className="hidden md:inline top-0 absolute z-50  font-bold   ">
+                <h2 className="text-5xl font-bold z-20 ml-48">{movie.name}</h2>
+                <p className="my-2 ml-48 ">{movie.overview}</p>
               </div>
-             
-
             </div>
           ))}
         </div>
