@@ -10,7 +10,7 @@ import { getGenreData } from "@/lib/API/GetDataFromIMDB";
 import Link from "next/link";
 
 export default async function GenreDropDown() {
-  const {genres}= await getGenreData()
+  const data= await getGenreData()
   
   return (
     <DropdownMenu>
@@ -18,7 +18,7 @@ export default async function GenreDropDown() {
       <DropdownMenuContent>
         <DropdownMenuLabel>Genre</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        {genres.map((genre:any)=>{
+        {data?.genres?.map((genre:any)=>{
           return(
             <DropdownMenuItem key={genre.id}>
               <Link href={`/genre/${genre.id}?genre=${genre.name}`}>

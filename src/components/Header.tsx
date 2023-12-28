@@ -8,7 +8,7 @@ import Search from "./Search";
 
 export default function Header() {
   return (
-    <header className="fixed  items-center w-full flex justify-between"> 
+    <header className="sticky  items-center w-full flex justify-between z-20"> 
       <Link  href='/'>
       <Image 
       src='https://cdn.worldvectorlogo.com/logos/disney.svg'
@@ -24,7 +24,7 @@ export default function Header() {
   //Genre dropdown
  }
 <div className="flex space-x-4">
-  {/* <GenreDropDown /> */}
+  <GenreDropDown />
   <Search />
   <ThemeToggle />
 </div>
