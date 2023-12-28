@@ -7,8 +7,7 @@ function MovieCard({ movie, isVertical }: any) {
   const url = getImagePath(poster_path);
 
   return (
-    <div className="flex  ">
-      <div className="relative mt-4 cursor-pointer flex-shrink-0 transform hover:scale-105 transition duration-200 ease-out">
+      <div className="relative flex mt-4 cursor-pointer flex-shrink-0 transform hover:scale-105 transition duration-200 ease-out">
         <div className=" absolute  inset-0 bg-gradient-to-b from-gray-200/0 via-gray-900/10 to-gray-500  z-20 dark:to-[black]" />
         <h1 className="absolute z-20 bottom-5 left-3 ">
           {title ? title : name}
@@ -22,9 +21,9 @@ function MovieCard({ movie, isVertical }: any) {
           height={1080}
           key={movie.id}
         />
+         <div className="flex-shrink-1">{isVertical && <p className="m-2 p-2 ">{overview}</p>}</div>
       </div>
-      <div>{isVertical && <p className="m-2 p-2 ">{overview}</p>}</div>
-    </div>
+    
   );
 }
 
